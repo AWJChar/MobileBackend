@@ -1,4 +1,4 @@
-package alexandercharlesworth.test.db;
+package alexandercharlesworth.rest.db;
 
 import alexcharlesworth.rest.db.DbUtils;
 import alexcharlesworth.rest.db.MobileAppDao;
