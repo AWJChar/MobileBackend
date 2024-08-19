@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mobileApp">
+
+    <select id = "get_user" resultMap="user_result_mapper">
+        select * from mobile_app.users where email = #{email} and password = #{password};
+    </select>
+
+    <resultMap id = "user_result_mapper" type = "alexcharlesworth.rest.pojos.User">
+        <result property = "email" column = "email"/>
+        <result property = "first_name" column = "first_name"/>
+        <result property = "surname" column = "surname"/>
+    </resultMap>
+
+</mapper>
