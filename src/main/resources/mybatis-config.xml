@@ -15,6 +15,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="ChargingLocationsMapper.xml"/>
+        <mapper resource="MobileAppMapper.xml"/>
     </mappers>
 </configuration>
