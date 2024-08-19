@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e35eb4dc-d256-4d98-9c40-75e5737d690b" name="Changes" comment="Login working." />
+    <list default="true" id="e35eb4dc-d256-4d98-9c40-75e5737d690b" name="Changes" comment="Login working.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,8 +79,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.MobileAppBackEnd [:RestServiceApplication.main()].executor": "Run",
+    "Gradle.MobileAppBackEnd [assemble].executor": "Run",
     "Gradle.MobileAppBackEnd [build].executor": "Run",
     "Gradle.MobileAppBackEnd [clean].executor": "Run",
+    "Gradle.MobileAppDaoTest (1).executor": "Run",
     "Gradle.MobileAppDaoTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -94,11 +101,15 @@
       <recent name="$PROJECT_DIR$/src/test" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="alexcharlesworth.rest" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RestServiceApplication">
+  <component name="RunManager" selected="Gradle.MobileAppBackEnd [assemble]">
     <configuration name="RestServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="alexcharlesworth.rest.RestServiceApplication" />
       <module name="MobileAppBackEnd.main" />
@@ -112,7 +123,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MobileAppBackEnd [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MobileAppBackEnd [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -123,7 +134,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="assemble" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -156,6 +167,30 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="MobileAppDaoTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;alexandercharlesworth.rest.db.MobileAppDaoTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="MobileAppDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -182,10 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MobileAppBackEnd [assemble]" />
+        <item itemvalue="Gradle.MobileAppDaoTest (1)" />
+        <item itemvalue="Gradle.MobileAppBackEnd [clean]" />
         <item itemvalue="Gradle.MobileAppDaoTest" />
         <item itemvalue="Application.RestServiceApplication" />
-        <item itemvalue="Gradle.MobileAppBackEnd [clean]" />
-        <item itemvalue="Gradle.MobileAppBackEnd [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724081647945</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Login working.">
+      <option name="closed" value="true" />
+      <created>1724082480979</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724082480979</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
