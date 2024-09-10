@@ -1,5 +1,6 @@
 package alexcharlesworth.rest.db;
 
+import alexcharlesworth.rest.pojos.Route;
 import alexcharlesworth.rest.pojos.User;
 import org.apache.ibatis.session.SqlSession;
 
@@ -17,6 +18,11 @@ public class MobileAppDao {
         params.put("password", password);
 
         return session.selectOne("mobileApp.get_user", params);
+    }
+
+    public Route getRoute(SqlSession session, String routeName) {
+
+        return session.selectOne("mobileApp.get_route", routeName);
     }
 }
 

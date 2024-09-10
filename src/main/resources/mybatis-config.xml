@@ -4,15 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <environments default="aws">
-        <environment id="development">
-            <transactionManager type="JDBC"/>
-            <dataSource type="POOLED">
-                <property name="driver" value="org.postgresql.Driver"/>
-                <property name="url" value="jdbc:postgresql://localhost:5432/postgres"/>
-                <property name="username" value="postgres"/>
-                <property name="password" value="postgres"/>
-            </dataSource>
-        </environment>
         <environment id="aws">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">

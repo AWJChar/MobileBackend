@@ -2,6 +2,7 @@ package alexandercharlesworth.rest.db;
 
 import alexcharlesworth.rest.db.DbUtils;
 import alexcharlesworth.rest.db.MobileAppDao;
+import alexcharlesworth.rest.pojos.Route;
 import alexcharlesworth.rest.pojos.User;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.jupiter.api.AfterAll;
@@ -56,5 +57,12 @@ class MobileAppDaoTest {
     public void getNullPassword() throws IOException {
         User user = mobileAppDao.getUser(sqlSession, null, "BadPassword");
         Assertions.assertNull(user);
+    }
+
+    @Test
+    public void getRoute() throws IOException {
+        Route route = mobileAppDao.getRoute(sqlSession,"Home Route");
+        Assertions.assertNotNull(route);
+        System.out.println(route);
     }
 }

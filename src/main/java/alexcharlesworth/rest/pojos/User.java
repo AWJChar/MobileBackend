@@ -9,14 +9,6 @@ public class User {
     private String surname;
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return Objects.equals(email, user.email) && Objects.equals(first_name, user.first_name) && Objects.equals(surname, user.surname);
-    }
-
-    @Override
     public int hashCode() {
         return Objects.hash(email, first_name, surname);
     }
@@ -51,6 +43,6 @@ public class User {
                 "email='" + email + '\'' +
                 ", first_name='" + first_name + '\'' +
                 ", surname='" + surname + '\'' +
-                '}';
+                 '}';
     }
 }

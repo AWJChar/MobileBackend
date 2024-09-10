@@ -15,4 +15,15 @@
         <result property = "surname" column = "surname"/>
     </resultMap>
 
+    <select id = "get_route" resultMap="route_result_mapper">
+        select * from mobile_app.routes where name = #{name};
+    </select>
+
+    <resultMap id="route_result_mapper" type="alexcharlesworth.rest.pojos.Route">
+        <result property = "name" column = "name"/>
+        <result property = "user_email" column = "user_email"/>
+        <result property = "waypoints" column = "waypoints"/>
+
+    </resultMap>
+
 </mapper>
