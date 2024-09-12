@@ -20,6 +20,11 @@ public class MobileAppDao {
         return session.selectOne("mobileApp.get_user", params);
     }
 
+    public void createUser(SqlSession session, User user) {
+        session.insert("create_user", user);
+            session.commit();
+    }
+
     public Route getRoute(SqlSession session, String routeName) {
 
         return session.selectOne("mobileApp.get_route", routeName);

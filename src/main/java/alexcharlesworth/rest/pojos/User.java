@@ -8,6 +8,15 @@ public class User {
     private String first_name;
     private String surname;
 
+    private String password;
+
+    public User(String email, String first_name, String surname, String password) {
+        this.email = email;
+        this.first_name = first_name;
+        this.surname = surname;
+        this.password = password;
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(email, first_name, surname);
@@ -35,6 +44,9 @@ public class User {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override

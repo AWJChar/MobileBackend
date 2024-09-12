@@ -65,4 +65,10 @@ class MobileAppDaoTest {
         Assertions.assertNotNull(route);
         System.out.println(route);
     }
+
+    @Test
+    public void createUser() throws IOException {
+        User user = new User("alex@gmail.net", "Alexander", "Charlesworth", "SecurePassword1");
+        mobileAppDao.createUser(sqlSession, user);
+    }
 }

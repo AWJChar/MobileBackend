@@ -2,6 +2,7 @@ package alexcharlesworth.rest;
 
 import alexcharlesworth.rest.db.DbUtils;
 import alexcharlesworth.rest.db.MobileAppDao;
+import alexcharlesworth.rest.pojos.CreateUserForm;
 import alexcharlesworth.rest.pojos.Route;
 import alexcharlesworth.rest.pojos.User;
 import org.apache.ibatis.session.SqlSession;
@@ -25,6 +26,21 @@ public class MobileAppController {
 		}
 
 		return user;
+	}
+
+	@PostMapping(value="/create_user")
+	public void createUser (@RequestBody CreateUserForm createUserForm) throws Exception {
+
+		MobileAppDao mobileAppDao = new MobileAppDao();
+		SqlSession sqlSession = DbUtils.getSqlSessionFactory().openSession();
+		User user = new User(createUserForm.email(), createUserForm.first_name(), createUserForm.surname(), createUserForm.password());
+
+		try {
+			mobileAppDao.createUser(sqlSession,user);
+		}
+		finally {
+			sqlSession.close();
+		}
 	}
 
 	@GetMapping(value="/routes")

@@ -9,6 +9,11 @@
         select * from mobile_app.users where email = #{email} and password = #{password};
     </select>
 
+    <insert id= "create_user" parameterType="alexcharlesworth.rest.pojos.User">
+        insert into mobile_app.users (email, first_name, surname, password)
+        values (#{email},#{first_name},#{surname},#{password});
+    </insert>
+
     <resultMap id = "user_result_mapper" type = "alexcharlesworth.rest.pojos.User">
         <result property = "email" column = "email"/>
         <result property = "first_name" column = "first_name"/>
