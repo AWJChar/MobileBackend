@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e35eb4dc-d256-4d98-9c40-75e5737d690b" name="Changes" comment="CreateUserForm extends User.">
+    <list default="true" id="e35eb4dc-d256-4d98-9c40-75e5737d690b" name="Changes" comment="CreateUserForm removed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alexcharlesworth/rest/MobileAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alexcharlesworth/rest/MobileAppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alexcharlesworth/rest/pojos/CreateUserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alexcharlesworth/rest/pojos/CreateUserForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alexcharlesworth/rest/pojos/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alexcharlesworth/rest/pojos/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MobileAppMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MobileAppMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727276833072</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="CreateUserForm removed.">
+      <option name="closed" value="true" />
+      <created>1727278618878</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1727278618878</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -305,6 +312,7 @@
     <MESSAGE value="Login working." />
     <MESSAGE value="Login working, fetch route and create user working." />
     <MESSAGE value="CreateUserForm extends User." />
-    <option name="LAST_COMMIT_MESSAGE" value="CreateUserForm extends User." />
+    <MESSAGE value="CreateUserForm removed." />
+    <option name="LAST_COMMIT_MESSAGE" value="CreateUserForm removed." />
   </component>
 </project>

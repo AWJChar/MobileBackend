@@ -7,18 +7,24 @@ import alexcharlesworth.rest.pojos.User;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+
 @RestController
 public class MobileAppController {
 
 	@GetMapping(value="/login")
-	public User login(@RequestParam(value= "email", defaultValue= "noEmail") String email, @RequestParam(value = "password") String password ) throws Exception {
+	public User login(@RequestParam(value= "email", defaultValue= "noEmail") String email, @RequestParam(value = "password") String password )  {
 
 		MobileAppDao mobileAppDao = new MobileAppDao();
-		SqlSession sqlSession = DbUtils.getSqlSessionFactory().openSession();
+		SqlSession sqlSession = null;
 		User user = null;
 
 		try {
+			sqlSession = DbUtils.getSqlSessionFactory().openSession();
 			user = mobileAppDao.getUser(sqlSession, email, password);
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		finally {
 			sqlSession.close();
@@ -28,13 +34,17 @@ public class MobileAppController {
 	}
 
 	@PostMapping(value="/create_user")
-	public void createUser (@RequestBody User user) throws Exception {
+	public void createUser (@RequestBody User user) {
 
 		MobileAppDao mobileAppDao = new MobileAppDao();
-		SqlSession sqlSession = DbUtils.getSqlSessionFactory().openSession();
+		SqlSession sqlSession = null;
 
 		try {
+			sqlSession = DbUtils.getSqlSessionFactory().openSession();
 			mobileAppDao.createUser(sqlSession,user);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		finally {
 			sqlSession.close();
@@ -42,15 +52,20 @@ public class MobileAppController {
 	}
 
 	@GetMapping(value="/routes")
-	public Route loadRoute(@RequestParam(value= "routeName") String routeName) throws Exception {
+	public Route loadRoute(@RequestParam(value= "routeName") String routeName) {
 
 		MobileAppDao mobileAppDao = new MobileAppDao();
-		SqlSession sqlSession = DbUtils.getSqlSessionFactory().openSession();
+		SqlSession sqlSession = null;
 		Route route = null;
 
 		try {
+			sqlSession = DbUtils.getSqlSessionFactory().openSession();
 			route = mobileAppDao.getRoute(sqlSession, routeName);
-		} finally {
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		finally {
 			sqlSession.close();
 		}
 		return route;
