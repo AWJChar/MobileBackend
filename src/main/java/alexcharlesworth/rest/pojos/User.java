@@ -17,11 +17,6 @@ public class User {
         this.password = password;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(email, first_name, surname);
-    }
-
     public String getEmail() {
         return email;
     }

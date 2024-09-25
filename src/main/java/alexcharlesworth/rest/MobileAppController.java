@@ -33,7 +33,7 @@ public class MobileAppController {
 
 		MobileAppDao mobileAppDao = new MobileAppDao();
 		SqlSession sqlSession = DbUtils.getSqlSessionFactory().openSession();
-		User user = new User(createUserForm.email(), createUserForm.first_name(), createUserForm.surname(), createUserForm.password());
+		User user = new User(createUserForm.getEmail(), createUserForm.getFirst_name(), createUserForm.getSurname(), createUserForm.getPassword());
 
 		try {
 			mobileAppDao.createUser(sqlSession,user);
