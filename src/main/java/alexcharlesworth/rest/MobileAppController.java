@@ -39,7 +39,7 @@ public class MobileAppController {
 
 	//Maps createUser requests to the DB
 	@PostMapping(value="/create_user")
-	public void createUser (@RequestBody User user) {
+	public User createUser (@RequestBody User user) {
 
 		//Establishes connection to DB
 		MobileAppDao mobileAppDao = new MobileAppDao();
@@ -48,7 +48,8 @@ public class MobileAppController {
 		//Attempts to add new user to database (email is primary key)
 		try {
 			sqlSession = DbUtils.getSqlSessionFactory().openSession();
-			mobileAppDao.createUser(sqlSession,user);
+			return mobileAppDao.createUser(sqlSession,user);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
