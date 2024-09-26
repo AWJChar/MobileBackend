@@ -1,0 +1,64 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class DBUtils
+class MobileAppDao
+class Route
+class User
+class MobileAppController
+class RestServiceApplication
+
+class DBUtils {
+static getSqlSessionFactory()
+}
+
+class User {
+    - string email
+    - string firstName
+    - string surname
+    - string password
+
+    + User(string email, string firstName, string surname)
+    + getEmail()
+    + getFirstName()
+    + getSurname()
+    + getPassword()
+    + setEmail(string email)
+    + setFirstName(string firstName)
+    + setSurname(string surname)
+    + setPassword(string password)
+}
+
+class Route {
+    - string name
+    - string user_email
+    - string waypoints
+
+    + getUser()
+    + getUserEmail()
+    + getWaypoints()
+    + setUser(string user)
+    + setUserEmail(string email)
+    + setWaypoints(string waypoints)
+}
+
+class MobileAppDao {
+    - Route route
+    - User user
+
+    + User getUser()
+    + createUser(User user)
+    + Route getRoute(string routeName)
+}
+
+class MobileAppController {
+    + User login(string email, string password)
+    + createUser(User user)
+    + Route loadRoute(string routeName)
+}
+
+class RestServiceApplication {
+    + void main(string[] args
+}
+
+@enduml

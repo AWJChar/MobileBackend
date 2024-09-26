@@ -1,22 +1,18 @@
 create schema if not exists mobile_app;
 
-drop table if exists mobile_app.users;
+drop table if exists mobile_app.users, mobile_app.routes;
 
-create table mobile_app.users (
-	email varchar primary key,
-	first_name varchar not null,
-	surname varchar not null,
-	password varchar not null
+
+CREATE TABLE mobile_app.users (
+	email varchar PRIMARY KEY,
+	first_name varchar NOT null,
+	surname varchar NOT null,
+	password varchar NOT null
 );
 
-INSERT INTO mobile_app.users
-(email, first_name, surname, password)
-VALUES('joe@gmail.net', 'Joe', 'Bloggs', 'Password1');
-
-INSERT INTO mobile_app.users
-(email, first_name, surname, password)
-VALUES('tom@gmail.net', 'Tom', 'Cat', 'Password1');
-
-INSERT INTO mobile_app.users
-(email, first_name, surname, password)
-VALUES('jerry@gmail.net', 'Jerry', 'Mouse', 'Password1');
+CREATE TABLE mobile_app.routes (
+	name varchar NOT NULL PRIMARY KEY,
+	user_email varchar NOT null,
+	waypoints varchar NOT null,
+	FOREIGN KEY (user_email) REFERENCES mobile_app.users(email)
+);

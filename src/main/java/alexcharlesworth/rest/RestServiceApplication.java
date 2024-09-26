@@ -1,3 +1,4 @@
+/*Launches REST service application*/
 package alexcharlesworth.rest;
 
 import org.springframework.boot.SpringApplication;
