@@ -22,7 +22,7 @@ public class MobileAppDao {
     //Inserts new user into the DB
     public void createUser(SqlSession session, User user) {
         session.insert("create_user", user);
-            session.commit();
+        session.commit();
     }
 
     //Returns the route of specified name
